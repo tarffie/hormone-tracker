@@ -1,0 +1,48 @@
+{
+  "name": "@hormonetracker/calendar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calendar app to work with HormoneTracker, remember your shots my monarch",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "hello": "echo 'hello, world!\n'",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "calendar",
+    "hrt",
+    "trans-affirmative",
+    "health"
+  ],
+  "author": "Emilia Alves <emiliaalves.tarffie@gmail.com>",
+  "license": "BSD-3-Clause",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "@hormonetracker/ui": "workspace:*",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "date-fns": "4.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.3",
+    "eslint": "9.36.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.2",
+    "vite": "7.1.7",
+    "vitest": "3.2.4",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/jest-dom": "6.8.0",
+    "jsdom": "27.0.0"
+  }
+}
