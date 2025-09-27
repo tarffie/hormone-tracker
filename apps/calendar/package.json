@@ -2,12 +2,11 @@
   "name": "@hormonetracker/calendar",
   "version": "1.0.0",
   "private": true,
-  "description": "Calendar app to work with HormoneTracker, remember your shots my monarch",
+  "description": "Calendar app to work with HormoneTracker, remember your shots, monarch",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "hello": "echo 'hello, world!\n'",
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",

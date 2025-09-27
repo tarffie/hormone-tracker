@@ -4,15 +4,26 @@
   "private": true,
   "description": "App to keep track of your hormones and important cycles",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
-    "format": "prettier --write .",
-    "start": "turbo run start",
-    "clean": "turbo run clean && rm -rf node_modules pnpm-lock.yaml",
+    "build": "pnpm --filter '*' build",
+    "build-deps": "pnpm --filter './packages/*' build",
+    "build:calendar": "pnpm --filter=@hormonetracker/calendar build",
+    "dev": "pnpm --filter '*' --parallel dev",
+    "dev:calendar": "pnpm --filter=@hormonetracker/calendar dev",
+    "test": "pnpm --filter '*' --parallel test",
+    "test:calendar": "pnpm --filter=@hormonetracker/calendar test",
+    "lint": "pnpm --filter '*' --parallel lint",
+    "lint:calendar": "pnpm --filter=@hormonetracker/calendar lint",
+    "start": "pnpm --filter '*' --parallel start",
+    "start:calendar": "pnpm --filter=@hormonetracker/calendar start",
+    "clean": "pnpm --filter '*' clean && rm -rf node_modules pnpm-lock.yaml",
+    "clean:calendar": "pnpm --filter=@hormonetracker/calendar clean",
     "prepare": "husky"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
   "keywords": [
     "hrt",
     "trans-affirmative",
@@ -31,12 +42,11 @@
     "@typescript-eslint/parser": "8.44.1",
     "eslint": "9.36.0",
     "eslint-config-prettier": "10.1.8",
-    "husky": "9.1.7",
     "lint-staged": "16.2.1",
     "prettier": "3.6.2",
-    "turbo": "2.5.8",
     "typescript": "5.9.2",
-    "vitest": "3.2.4"
+    "vitest": "3.2.4",
+    "husky": "9.1.7"
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": [
