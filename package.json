@@ -1,22 +1,22 @@
 {
-  "name": "HormoneTracker",
+  "name": "hormone-tracker",
   "version": "1.0.0",
   "private": true,
   "description": "App to keep track of your hormones and important cycles",
   "scripts": {
     "build": "pnpm --filter '*' build",
     "build-deps": "pnpm --filter './packages/*' build",
-    "build:calendar": "pnpm --filter=@hormonetracker/calendar build",
+    "build:calendar": "pnpm --filter=@hormone-tracker/calendar build",
     "dev": "pnpm --filter '*' --parallel dev",
-    "dev:calendar": "pnpm --filter=@hormonetracker/calendar dev",
+    "dev:calendar": "pnpm --filter=@hormone-tracker/calendar dev",
     "test": "pnpm --filter '*' --parallel test",
-    "test:calendar": "pnpm --filter=@hormonetracker/calendar test",
+    "test:calendar": "pnpm --filter=@hormone-tracker/calendar test",
     "lint": "pnpm --filter '*' --parallel lint",
-    "lint:calendar": "pnpm --filter=@hormonetracker/calendar lint",
+    "lint:calendar": "pnpm --filter=@hormone-tracker/calendar lint",
     "start": "pnpm --filter '*' --parallel start",
-    "start:calendar": "pnpm --filter=@hormonetracker/calendar start",
+    "start:calendar": "pnpm --filter=@hormone-tracker/calendar start",
     "clean": "pnpm --filter '*' clean && rm -rf node_modules pnpm-lock.yaml",
-    "clean:calendar": "pnpm --filter=@hormonetracker/calendar clean",
+    "clean:calendar": "pnpm --filter=@hormone-tracker/calendar clean",
     "prepare": "husky"
   },
   "workspaces": [
@@ -42,11 +42,12 @@
     "@typescript-eslint/parser": "8.44.1",
     "eslint": "9.36.0",
     "eslint-config-prettier": "10.1.8",
+    "globals": "^16.4.0",
+    "husky": "9.1.7",
     "lint-staged": "16.2.1",
     "prettier": "3.6.2",
     "typescript": "5.9.2",
-    "vitest": "3.2.4",
-    "husky": "9.1.7"
+    "vitest": "3.2.4"
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": [
